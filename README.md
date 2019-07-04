@@ -2,7 +2,7 @@
 
 A template to create executables for different plattforms with optional UPX compression.
 
-Every command will be write to console to every step can be reproduced.
+Every command will be written to console to every step can be reproduced.
 
 The script can be speeded up by uncommenting the platforms which are not needed.
 
@@ -16,6 +16,15 @@ $platforms += @{GOOS = "linux"; GOARCH = "386"; }
 $platforms += @{GOOS = "linux"; GOARCH = "arm"; }
 $platforms += @{GOOS = "linux"; GOARCH = "arm64"; }
 $platforms += @{GOOS = "darwin"; GOARCH = "amd64"; }
+```
+
+Between `debug` and `publish` is great improvment in file size.
+
+```
+FullName                                                    Length in MB
+--------                                                    ------------
+C:\Dev\GoTemplate\build\debug\MyProgram_windows_amd64.exe   1,965
+C:\Dev\GoTemplate\build\publish\MyProgram_windows_amd64.exe 0,417
 ```
 
 ## Files
